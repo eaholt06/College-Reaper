@@ -7,10 +7,10 @@
 #   * +:name+ provides a descriptive title for the course
 #   * +:credit_hours+ provides the number of credit hours counted toward degree
 class Course < ActiveRecord::Base
-  validates :course_number, presence: true, numericality: true
+  validates :course_number, presence: true
   validates :instructional_unit, presence: true
   validates :name, presence: true
-  validates :credit_hours, presence: true
+  validates :credit_hours, presence: true, numericality: true
 
   has_many :sections
   has_and_belongs_to_many :course_groups

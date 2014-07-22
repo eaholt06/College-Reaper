@@ -2,17 +2,17 @@ class CreateLocations < ActiveRecord::Migration
   def up
     create_table :locations do |t|
       # Building name
-      t.text :name
+      t.text :name, null :false, default: ''
 
       # GPS coordinates, using RGeo and PostGIS
       t.point :latlong, :geographic => true
 
       # Street address components
-      t.text :street1
+      t.text :street1, null :false, default: ''
       t.text :street2
-      t.text :city
-      t.text :state
-      t.text :zip 
+      t.text :city, null :false, default: ''
+      t.text :state, null :false, default: ''
+      t.text :zip, null :false, default: ''
 
       # Metadata field
       t.timestamps
