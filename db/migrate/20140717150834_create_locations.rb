@@ -8,11 +8,11 @@ class CreateLocations < ActiveRecord::Migration
       t.point :latlong, :geographic => true
 
       # Street address components
-      t.text :street1, null :false, default: ''
+      t.text :street1, null: false, default: ''
       t.text :street2
-      t.text :city, null :false, default: ''
-      t.text :state, null :false, default: ''
-      t.text :zip, null :false, default: ''
+      t.text :city, null: false, default: ''
+      t.text :state, null: false, default: ''
+      t.text :zip, null: false, default: ''
 
       # Metadata field
       t.timestamps
